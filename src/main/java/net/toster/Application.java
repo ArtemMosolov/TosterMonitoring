@@ -2,14 +2,17 @@ package net.toster;
 
 import java.io.IOException;
 
+import net.toster.prog.SiteParser;
+
 public class Application {
 
-	String newQuestions = "https://toster.ru/questions/latest";
-	String interesting = "https://toster.ru/questions/interesting";
-	String withoutAnswer = "https://toster.ru/questions/without_answer";
-	
+	String link = "https://toster.ru/q/";
+
 	public void run() throws IOException {
-		
-		
+
+		SiteParser siteParser = new SiteParser();
+		siteParser.setLink(link);
+		siteParser.parseSite();
+
 	}
 }
